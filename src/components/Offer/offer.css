@@ -1,0 +1,119 @@
+/* Компонент предложение */
+.offer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 174px;
+    border-radius: 10px;
+    background: rgba(232, 235, 242, 1);
+    margin-top: 35px;
+}
+
+.offer-column1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(78, 105, 170); */
+}
+
+.offer-column1-price {
+    width: 136px;
+    height: 39px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: rgba(78, 20, 140, 1);
+    margin: 20px 0 25px;
+}
+
+.offer-column1-airport {
+    width: 80px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgba(133, 138, 227, 1);
+}
+
+.offer-column1-start-finish {
+    width: 102px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgba(78, 20, 140, 1);
+}
+
+.offer-column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    width: 100%;
+    height: 100%;
+    /* background: rgb(122, 129, 146); */
+}
+
+.offer-column2-on-road {
+    width: 52px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgba(133, 138, 227, 1);
+    margin: 0 0 10px;
+}
+
+.offer-column2-time {
+    width: 85px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgba(78, 20, 140, 1);
+    margin: 0 0 10px;
+}
+
+
+.offer-column3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(189, 194, 207); */
+}
+
+.offer-column3-company-logo {
+    width: 160px;
+    height: 46px;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.offer-column3-transfer-name {
+    width: 88px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgba(133, 138, 227, 1);
+}
+
+.offer-column3-transfer {
+    width: 97px;
+    height: 19px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgba(78, 20, 140, 1);
+
+
+}
+

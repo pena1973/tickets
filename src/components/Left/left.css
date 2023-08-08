@@ -1,0 +1,19 @@
+@media screen and (min-width: 769px) {
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+        max-width: calc(272px + 35px);
+        height: 100%;
+        padding-right: 35px;
+        /* background-color: azure; */
+    }
+
+   
+}
+
+@media screen and (max-width: 768px) {
+    .left-panel {
+        display: none;
+    }
+
+}

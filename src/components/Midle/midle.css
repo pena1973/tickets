@@ -1,0 +1,6 @@
+
+/* midle */
+.midle {
+    display: flex;
+    flex-direction: row;
+}
