@@ -43,13 +43,31 @@ export const Offer = ({
     minute: 'numeric'
   }
 
-   
+   const transferView= (transferCount: number) =>{
+    switch (transferCount) {
+      case 1:
+        return 'пересадка';
+        break;
+      case 2:
+        return 'пересадки';
+        break;
+      case 3:
+        return 'пересадки';
+        break;    
+      case 4:
+        return 'пересадки';
+        break;    
+      default:
+        return '';
+    } 
+
+   }
   
   return (
     <div className="offer">
 
       <div className="offer-column1 radius-left">
-        <div className="offer-column1-price">{price} Р</div>
+        <div className="offer-column1-price">{price} EUR</div>
         <div className="offer-column1-airport">SVO - LED </div>
         <div className="offer-column1-start-finish">{start.toLocaleString("ru", options)} - {finish.toLocaleString("ru", options)}</div>
       </div>
@@ -61,7 +79,7 @@ export const Offer = ({
       <div className="offer-column3 radius-right">
         <img className="offer-column3-company-logo" src={src} alt="avatar"></img>
         <div className="offer-column3-transfer-name">Пересадки</div>
-        <div className="offer-column3-transfer">{transferCount} пересадка</div>
+        <div className="offer-column3-transfer">{transferCount} {transferView(transferCount)}</div>
       </div>
     </div>
   );

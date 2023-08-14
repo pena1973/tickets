@@ -1,66 +1,55 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./companyFilterLeft.css";
+import { RootState } from "../../main";
+import { setCompanies1, setHeader } from '../../redux/slices';
+import { CreateTxt } from "../utils";
 
 export interface CompanyFilterLeftProps {
-  setting: string,  
-  // checked1 : boolean,
-  // checked2 : boolean,
-  // checked3 : boolean,  
+  setting: string,
 }
 
 export const CompanyFilterLeft = ({
   setting,  
-  // checked1,
-  // checked2,
-  // checked3,
-
 }: CompanyFilterLeftProps) => {
 
-  const [checked1, setchecked1] = useState(false);
-  const [checked2, setchecked2] = useState(false);
-  const [checked3, setchecked3] = useState(false);
-  
+  const companies = useSelector((state: RootState) => {
+    return state.sortSlices.companies;
+  })
+  const transfers = useSelector((state: RootState) => {
+    return state.sortSlices.transfers;
+  })
 
-  const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
+  const dispatch = useDispatch();
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let inp = e.target as HTMLInputElement;
 
-    let inp = e.target as HTMLInputElement;    
-    switch (inp.id) {
-      case '1':
-        setchecked1(inp.checked);
-        break;
-      case '2':
-        setchecked2(inp.checked);
-        break;
-      case '3':
-        setchecked3(inp.checked);
-        break;      
-      default:
-    }
-    // положть в редукс
+    const newCompanies = companies.map((company) => ({
+      ...company,
+      checked: (company.id === inp.id) ? !company.checked : company.checked
+    }));
+
+    // положть в редукс отбор    
+    dispatch(setCompanies1(newCompanies));
+    dispatch(setHeader(CreateTxt(transfers, newCompanies)));    
   }
-  
+
+  let companyReactNodes = companies.map(element => (
+    <label className="container-company" key={element.id}>{element.name}
+      <input id={element.id} type="checkbox" onChange={(e) => handleChange(e)} checked={element.checked} name={element.id}></input>
+      <span className="checkmark"></span>
+      <span className="checkmark1"></span>
+    </label>
+
+  ))
+
   if (setting === 'V1') {
+
     return (
       <div className="layout-left-companies_V1">
         <div className="layout-left-companies-header_V1">Компании</div>
         {/* <!-- чекБокс компании --> */}
         <div className="container-companies">
-          <label className="container-company">Победа
-            <input id='1' type="checkbox" checked={checked1} onClick={(e) => handleClick(e)} name="radio"></input>
-            <span className="checkmark"></span>
-            <span className="checkmark1"></span>
-          </label>
-          <label className="container-company">Red Wings
-            <input id='2' type="checkbox" checked={checked2} onClick={(e) => handleClick(e)} name="radio"></input>
-            <span className="checkmark"></span>
-            <span className="checkmark1"></span>
-          </label>
-          <label className="container-company">S7 Airlines
-            <input id='3' type="checkbox" checked={checked3} onClick={(e) => handleClick(e)} name="radio"></input>
-            <span className="checkmark"></span>
-            <span className="checkmark1"></span>
-          </label>
-
+          {companyReactNodes}
         </div>
       </div>
     );
@@ -70,21 +59,7 @@ export const CompanyFilterLeft = ({
         <div className="layout-left-transfer-header_V2">Компании</div>
         {/* <!-- чекБокс компании --> */}
         <div className="container-companies">
-          <label className="container-company">Победа
-            <input id='1' type="checkbox" checked={checked1} onClick={(e) => handleClick(e)} name="radio"></input>
-              <span className="checkmark"></span>
-              <span className="checkmark1"></span>
-          </label>
-          <label className="container-company">Red Wings
-            <input id='2' type="checkbox" checked={checked2} onClick={(e) => handleClick(e)} name="radio"></input>
-              <span className="checkmark"></span>
-              <span className="checkmark1"></span>
-          </label>
-          <label className="container-company">S7 Airlines
-            <input id='3' type="checkbox" checked={checked3} onClick={(e) => handleClick(e)} name="radio"></input>
-              <span className="checkmark"></span>
-              <span className="checkmark1"></span>
-          </label>
+          {companyReactNodes}
         </div>
       </div>
     )
