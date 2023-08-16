@@ -1,8 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "./companyFilterLeft.css";
-import { RootState } from "../../main";
-import { setCompanies1, setHeader } from '../../redux/slices';
+import { RootState, useAppDispatch } from "../../main";
+import { setCompanies1, setHeader, queryThunk,showLoading } from '../../redux/slices';
 import { CreateTxt } from "../utils";
+
 
 export interface CompanyFilterLeftProps {
   setting: string,
@@ -19,7 +20,7 @@ export const CompanyFilterLeft = ({
     return state.sortSlices.transfers;
   })
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let inp = e.target as HTMLInputElement;
 
@@ -30,7 +31,10 @@ export const CompanyFilterLeft = ({
 
     // положть в редукс отбор    
     dispatch(setCompanies1(newCompanies));
-    dispatch(setHeader(CreateTxt(transfers, newCompanies)));    
+    dispatch(setHeader(CreateTxt(transfers, newCompanies)));  
+    // запросить с сайта в соответствие с настройками
+    dispatch(showLoading(true));  
+    dispatch(queryThunk({transfers,companies}));  
   }
 
   let companyReactNodes = companies.map(element => (

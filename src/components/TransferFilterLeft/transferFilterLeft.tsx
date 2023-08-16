@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import "./transferFilterLeft.css";
-import { RootState} from "../../main";
-import { setTransfers1,setHeader} from '../../redux/slices';
+import { RootState,useAppDispatch} from "../../main";
+import { setTransfers1,setHeader,queryThunk,showLoading} from '../../redux/slices';
 import { CreateTxt } from "../utils";
 
 export interface TransferFilterLeftProps {
@@ -20,7 +20,7 @@ const companies = useSelector((state: RootState) => {
   return state.sortSlices.companies;
 })
 
- const dispatch = useDispatch();  
+ const dispatch = useAppDispatch();  
  
   const handleChange  = (e: React.ChangeEvent<HTMLInputElement>) => {
     let newTransfers = {
@@ -55,6 +55,8 @@ const companies = useSelector((state: RootState) => {
     // положть в редукс отбор
     dispatch(setTransfers1(newTransfers));
     dispatch(setHeader(CreateTxt(newTransfers, companies)));
+    dispatch(showLoading(true));  
+    dispatch(queryThunk({transfers,companies}));  
   }
   // let checked = true;
   if (setting === 'V1') {
