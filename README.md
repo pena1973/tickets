@@ -1,23 +1,35 @@
 # learning project tickets
-Screenshots:
+### Screenshots:
 
-Ordinary screen - "./demo/Screen3.JPG"
+Ordinary screen - "./demo/Screen3.JPG" 
+
 Loading tickets process screen - "./demo/Screen4.JPG"
+
 Mobile screen - "./demo/Screen1.JPG"
+
 Mmobile screen filter - "./demo/Screen2.JPG"
 
-The project provides work in browsers Crome, Edge
-Technologies:
-React, Redux, TypeScript, HTML, css
-interface language - russian
+#### The project provides work in browsers Crome, Edge
 
-Скринs:
+### Technologies:
+
+React, Redux, TypeScript, HTML, css
+
+#### interface language - russian
+# Учебный проект билеты
+### Скрины:
+
 Обычный экран  -"./demo/Screen3.JPG"
+
 Процесс загрузки билетов - "./demo/Screen4.JPG"
+
 Мобильный экран - "./demo/Screen1.JPG"
+
 Мобильный экран фильтр - "./demo/Screen2.JPG"
 
-Проект предусматривает работу в браузерах Crome, Edge 
-Использованые технологии
+#### Проект предусматривает работу в браузерах Crome, Edge 
+
+### Использованые технологии
 React, Redux, TypeScript
-Язык интерфейса  - русский
+
+#### Язык интерфейса  - русский
