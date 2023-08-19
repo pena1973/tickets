@@ -1,13 +1,14 @@
 # learning project tickets
 ### Screenshots:
 
-Ordinary screen - "./demo/Screen3.JPG" 
+[Ordinary screen ](https://github.com/pena1973/tickets/blob/main/demo/Screen3.JPG)
 
-Loading tickets process screen - "./demo/Screen4.JPG"
+[Loading tickets process screen](https://github.com/pena1973/tickets/blob/main/demo/Screen4.JPG)
 
-Mobile screen - "./demo/Screen1.JPG"
+[Mobile screen](https://github.com/pena1973/tickets/blob/main/demo/Screen1.JPG)
 
-Mmobile screen filter - "./demo/Screen2.JPG"
+[Mobile screen filter](https://github.com/pena1973/tickets/blob/main/demo/Screen2.JPG)
+
 
 #### The project provides work in browsers Crome, Edge
 
@@ -19,13 +20,14 @@ React, Redux, TypeScript, HTML, css
 # Учебный проект билеты
 ### Скрины:
 
-Обычный экран  -"./demo/Screen3.JPG"
 
-Процесс загрузки билетов - "./demo/Screen4.JPG"
+[Обычный экран](https://github.com/pena1973/tickets/blob/main/demo/Screen3.JPG)
 
-Мобильный экран - "./demo/Screen1.JPG"
+[Процесс загрузки билетов](https://github.com/pena1973/tickets/blob/main/demo/Screen4.JPG)
 
-Мобильный экран фильтр - "./demo/Screen2.JPG"
+[Мобильный экран](https://github.com/pena1973/tickets/blob/main/demo/Screen1.JPG)
+
+[Мобильный экран фильтр](https://github.com/pena1973/tickets/blob/main/demo/Screen2.JPG)
 
 #### Проект предусматривает работу в браузерах Crome, Edge 
 
