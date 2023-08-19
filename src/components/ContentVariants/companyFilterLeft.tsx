@@ -1,10 +1,10 @@
-import "./companyFilterLeft.css";
+import "./companyFilter.css";
 
-export interface CompanyFilterLeftProps {
+export interface CompanyFilterProps {
 }
 
-export const CompanyFilterLeft = ({
-}: CompanyFilterLeftProps) => {
+export const CompanyFilter = ({
+}: CompanyFilterProps) => {
  
   return (
     <div>    

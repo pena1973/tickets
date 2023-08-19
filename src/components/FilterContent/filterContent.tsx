@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./filterContent.css";
-import { TransferFilterLeft } from "../TransferFilterLeft/transferFilterLeft";
-import { CompanyFilterLeft } from "../CompanyFilterLeft/companyFilterLeft";
+import { TransferFilter } from "../TransferFilter/transferFilter";
+import { CompanyFilter } from "../CompanyFiltert/companyFilter";
 import arrowDown from "./images/arrow-down.svg";
 import arrowUp from "./images/arrow-up.svg";
 import { useSelector } from "react-redux";
@@ -49,9 +49,9 @@ export const FilterContent = ({
       </div>
       <div className="content-panel-filter-open none">
         {/* <!-- Количество пересадок--> */}
-        <TransferFilterLeft setting={'V2'} />
+        <TransferFilter setting={'V2'} />
         {/* <!-- Компании--> */}
-        <CompanyFilterLeft setting={'V2'}  />
+        <CompanyFilter setting={'V2'}  />
       </div>
     </div>
   );

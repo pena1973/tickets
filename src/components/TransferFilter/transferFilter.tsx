@@ -1,16 +1,17 @@
 import {  useSelector } from "react-redux";
-import "./transferFilterLeft.css";
+import "./transferFilter.css";
 import { RootState,useAppDispatch} from "../../main";
 import { setTransfers1,setHeader,queryThunk,showLoading} from '../../redux/slices';
 import { CreateTxt } from "../utils";
+import { Transfers } from '../../redux/types'
 
-export interface TransferFilterLeftProps {
+export interface TransferFilterProps {
   setting: string,
 };
 
-export const TransferFilterLeft = ({
+export const TransferFilter = ({
   setting,  
-}: TransferFilterLeftProps) => { 
+}: TransferFilterProps) => { 
 
   const transfers = useSelector((state:RootState) => {    
      return state.sortSlices.transfers;     
@@ -20,10 +21,13 @@ const companies = useSelector((state: RootState) => {
   return state.sortSlices.companies;
 })
 
+const variant = useSelector((state: RootState) => {
+  return state.sortSlices.variant;
+})
  const dispatch = useAppDispatch();  
  
   const handleChange  = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let newTransfers = {
+    let newTransfers:Transfers = {
       checked0: transfers.checked0,
       checked1: transfers.checked1,
       checked2: transfers.checked2,
@@ -56,7 +60,8 @@ const companies = useSelector((state: RootState) => {
     dispatch(setTransfers1(newTransfers));
     dispatch(setHeader(CreateTxt(newTransfers, companies)));
     dispatch(showLoading(true));  
-    dispatch(queryThunk({transfers,companies}));  
+    let loadmore = false;
+    dispatch(queryThunk({variant,loadmore}));  
   }
   // let checked = true;
   if (setting === 'V1') {

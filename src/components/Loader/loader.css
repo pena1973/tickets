@@ -1,0 +1,14 @@
+/* Компонент загрузка */
+.loader{
+    /* background: rgb(201, 197, 206); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
+    
+    }
+    
+    .img-loader{
+    width: 120px;
+    height: 120px;
+    }

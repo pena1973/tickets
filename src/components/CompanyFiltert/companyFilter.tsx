@@ -1,23 +1,26 @@
 import { useSelector } from "react-redux";
-import "./companyFilterLeft.css";
+import "./companyFilter.css";
 import { RootState, useAppDispatch } from "../../main";
 import { setCompanies1, setHeader, queryThunk,showLoading } from '../../redux/slices';
 import { CreateTxt } from "../utils";
 
 
-export interface CompanyFilterLeftProps {
+export interface CompanyFilterProps {
   setting: string,
 }
 
-export const CompanyFilterLeft = ({
+export const CompanyFilter = ({
   setting,  
-}: CompanyFilterLeftProps) => {
+}: CompanyFilterProps) => {
 
   const companies = useSelector((state: RootState) => {
     return state.sortSlices.companies;
   })
   const transfers = useSelector((state: RootState) => {
     return state.sortSlices.transfers;
+  })
+  const variant = useSelector((state: RootState) => {
+    return state.sortSlices.variant;
   })
 
   const dispatch = useAppDispatch();
@@ -34,7 +37,8 @@ export const CompanyFilterLeft = ({
     dispatch(setHeader(CreateTxt(transfers, newCompanies)));  
     // запросить с сайта в соответствие с настройками
     dispatch(showLoading(true));  
-    dispatch(queryThunk({transfers,companies}));  
+    let loadmore = true;
+    dispatch(queryThunk({variant,loadmore}));  
   }
 
   let companyReactNodes = companies.map(element => (

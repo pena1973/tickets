@@ -25,13 +25,13 @@ export const Offer = ({
   
   let src = '';
   switch (companyLogo) {
-    case 'airlines':
+    case 'Airlines':
       src = airlines;
       break;
-    case 'red_wings':
+    case 'Red wings':
       src = red_wings;
       break;
-    case 'win':
+    case 'Win':
       src = win;
       break;    
     default:

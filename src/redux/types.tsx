@@ -8,8 +8,6 @@ export const SET_COMPANIES = 'SET_COMPANIES';
 export type QueryState = {
     loading: boolean,
     tickets: Ticket[],    
-    companies: Company[],    
-    transfers: Transfers,        
   }
 
 //   состояние сорт редюсора
@@ -33,6 +31,7 @@ export interface Company {
 }
 
 export interface Ticket {
+  key:number;
   price: number;
   start: Date;
   finish: Date;
