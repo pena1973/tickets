@@ -3,7 +3,7 @@
 
 [Ordinary screen ](https://github.com/pena1973/tickets/blob/main/demo/Screen3.JPG)
 
-[Loading tickets process screen](https://github.com/pena1973/tickets/blob/main/demo/Screen4.JPG)
+[Loading tickets process screen](https://github.com/pena1973/tickets/blob/main/demo/Screen4.jpg)
 
 [Mobile screen](https://github.com/pena1973/tickets/blob/main/demo/Screen1.JPG)
 
@@ -23,7 +23,7 @@ React, Redux, TypeScript, HTML, css
 
 [Обычный экран](https://github.com/pena1973/tickets/blob/main/demo/Screen3.JPG)
 
-[Процесс загрузки билетов](https://github.com/pena1973/tickets/blob/main/demo/Screen4.JPG)
+[Процесс загрузки билетов](https://github.com/pena1973/tickets/blob/main/demo/Screen4.jpg)
 
 [Мобильный экран](https://github.com/pena1973/tickets/blob/main/demo/Screen1.JPG)
 
