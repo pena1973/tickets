@@ -1,23 +1,37 @@
 # learning project tickets
-Screenshots:
+### Screenshots:
 
-Ordinary screen - "./demo/Screen3.JPG"
-Loading tickets process screen - "./demo/Screen4.JPG"
-Mobile screen - "./demo/Screen1.JPG"
-Mmobile screen filter - "./demo/Screen2.JPG"
+[Ordinary screen ](https://github.com/pena1973/tickets/blob/main/demo/Screen3.JPG)
 
-The project provides work in browsers Crome, Edge
-Technologies:
+[Loading tickets process screen](https://github.com/pena1973/tickets/blob/main/demo/Screen4.JPG)
+
+[Mobile screen](https://github.com/pena1973/tickets/blob/main/demo/Screen1.JPG)
+
+[Mobile screen filter](https://github.com/pena1973/tickets/blob/main/demo/Screen2.JPG)
+
+
+#### The project provides work in browsers Crome, Edge
+
+### Technologies:
+
 React, Redux, TypeScript, HTML, css
-interface language - russian
 
-Скринs:
-Обычный экран  -"./demo/Screen3.JPG"
-Процесс загрузки билетов - "./demo/Screen4.JPG"
-Мобильный экран - "./demo/Screen1.JPG"
-Мобильный экран фильтр - "./demo/Screen2.JPG"
+#### interface language - russian
+# Учебный проект билеты
+### Скрины:
 
-Проект предусматривает работу в браузерах Crome, Edge 
-Использованые технологии
+
+[Обычный экран](https://github.com/pena1973/tickets/blob/main/demo/Screen3.JPG)
+
+[Процесс загрузки билетов](https://github.com/pena1973/tickets/blob/main/demo/Screen4.JPG)
+
+[Мобильный экран](https://github.com/pena1973/tickets/blob/main/demo/Screen1.JPG)
+
+[Мобильный экран фильтр](https://github.com/pena1973/tickets/blob/main/demo/Screen2.JPG)
+
+#### Проект предусматривает работу в браузерах Crome, Edge 
+
+### Использованые технологии
 React, Redux, TypeScript
-Язык интерфейса  - русский
+
+#### Язык интерфейса  - русский
